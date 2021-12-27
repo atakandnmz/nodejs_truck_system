@@ -1,10 +1,10 @@
-const Poll=require('pg').Pool;
+const Pool=require('pg').Pool;
 
 
-const pool=new Poll({
+const pool=new Pool({
     user:"postgres",
-    password:"asd123",
-    database:"tracking_database",
+    password:"123",
+    database:"truck_system",
     host:"localhost",
     port:5432
 })
