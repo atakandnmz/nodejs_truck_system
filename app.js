@@ -8,13 +8,13 @@ const deviceRoute = require('./app/routes/deviceRoute');
 //const deviceTypeRoute = require("./app/routes/deviceTypeRoute");
 
 app.use(express.urlencoded({ extended: true }));//JSON veri tipinde gelecek olan dataların kullanılabilmesi için bu tanımlamanın yapılması gerekmektedir.
-app.use(express.json());Encode//(kodlanmış/şifrelenmiş) edilmiş urller üzerinde Body-Parser’ı kullanmak istiyorsanız eğer “extended” özelliğine true değerini vermeniz yeterlidir.
+app.use(express.json());//Encode(kodlanmış/şifrelenmiş) edilmiş urller üzerinde Body-Parser’ı kullanmak istiyorsanız eğer “extended” özelliğine true değerini vermeniz yeterlidir.
 
-app.use("/vehicle",vehicleRoute);
+//app.use("/vehicle",vehicleRoute);
 app.use("/device",deviceRoute);
-app.use("/device_type", deviceTypeRoute);
-app.use("/log_temperature", logTemperatureRoute);
-app.use("/log_location", logLocationRoute);
+//app.use("/device_type", deviceTypeRoute);
+//app.use("/log_temperature", logTemperatureRoute);
+//app.use("/log_location", logLocationRoute);
 
 app.get('/', function (req, res) {
     res.send('Inavitas Çalışması')
